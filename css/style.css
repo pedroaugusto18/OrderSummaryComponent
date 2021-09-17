@@ -1,0 +1,204 @@
+:root {
+  --red: hsl(0, 100%, 74%);
+  --green: hsl(154, 59%, 51%);
+  --blue: hsl(248, 32%, 49%);
+  --darkBlue: hsl(249, 10%, 26%);
+  --grayishBlue: hsl(246, 25%, 77%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+.fw400 {
+  font-weight: 400;
+}
+
+.fw500 {
+  font-weight: 500;
+}
+
+.fw600 {
+  font-weight: 600;
+}
+
+.fw700 {
+  font-weight: 700;
+}
+
+.box-shadow {
+  box-shadow: 0px 6px 0px 0px rgba(0,0,0,0.2);
+}
+
+.border-radius {
+  border-radius: 0.4em;
+}
+
+body {
+  height: 100%;
+  width: 100%;
+  background: url(../images/bg-intro-mobile.png) no-repeat var(--red);
+  text-align: center;
+  color: #fff;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  padding: 5em 1em 1em;
+}
+
+.container-left-text h1 {
+  font-size: 1.6rem;
+  padding-bottom: 0.8em;
+  line-height: 1.3;
+}
+
+.container-left-text p {
+  font-size: 1rem;
+  padding-bottom: 4em;
+}
+
+button.btn {
+  width: 100%;
+  background-color: var(--blue);
+  color: #fff;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  padding: 1rem 4rem;
+  margin-bottom: 1rem;
+  line-height: 1.5;
+}
+
+form {
+  background-color: #fff;
+  padding: 1em;
+}
+
+input {
+  width: 100%;
+  border-radius: 0.5em;
+  outline: none;
+  border: none;
+  padding: 1em;
+  font-weight: 400;
+}
+
+.border {
+  border: 1px solid var(--grayishBlue);
+}
+
+input::placeholder {
+  color: var(--grayishBlue);
+  font-weight: 700;
+}
+
+input.error::placeholder {
+  color: var(--red);
+}
+
+input:focus {
+  border: 1px solid var(--darkBlue);
+  color: var(--darkBlue);
+  font-weight: 700;
+}
+
+.error-icon {
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  transform: translate(-3em, 50%);
+  visibility: hidden;
+}
+
+.error-icon.visible {
+  visibility: visible;
+}
+
+.error-msg {
+  color: var(--red);
+  font-style: italic;
+  text-align: right;
+  font-size: 0.6rem;
+  padding: 0.5em 0 1.5em;
+  visibility: hidden;
+}
+
+.error-msg.visible {
+  visibility: visible;
+}
+
+.email-error {
+  color: var(--red);
+}
+
+form > p:last-of-type {
+  color: var(--grayishBlue);
+  padding: 0 2rem 1rem;
+  font-size: 0.7rem;
+}
+
+form > p:last-of-type span {
+  color: var(--red);
+}
+
+.btn[type="submit"] {
+  background-color: var(--green);
+  text-transform: uppercase;
+  padding: 1rem;
+  box-shadow: 0px 6px 0px 0px hsl(154, 59%, 46%);
+  font-size: 1.1rem;
+  letter-spacing: 0.1rem;
+}
+
+.attribution {
+  font-size: 11px; 
+  text-align: center; 
+}
+
+.attribution a { 
+  color: hsl(228, 45%, 44%); 
+}
+
+@media screen and (min-width: 376px) {
+  body {
+    background: url(../images/bg-intro-desktop.png) no-repeat var(--red);
+}
+}
+@media screen and (min-width: 700px) {
+  main {
+    flex-direction: row;
+  }
+  .container-left,
+  .container-right {
+    width: 50%;
+  }
+  .container-left {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: left;
+    padding: 2em;
+  }
+  .container-left h1 {
+    font-size: 2.5rem;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .container-left {
+    padding: 4em;
+  }
+  .container-left h1 {
+    font-size: 3rem;
+  }
+  .btn-form-container {
+    margin: 0 7rem 0 0;
+  }
+}
